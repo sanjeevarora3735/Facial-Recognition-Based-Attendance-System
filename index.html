@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="face-api.min.js"></script>
+    <script defer src="script.js"></script>
+    <script defer src="firebase.js"></script>
+
+    <title>Face Recognition</title>
+    <style>
+        body {
+            margin: 10rem;
+            max-width: 100%;
+            max-height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-analytics.js"; 
+        const firebaseConfig = {
+            apiKey: "AIzaSyDwsLig45B6Viy49Vu9OA-DRKbaYl9v1lM",
+            authDomain: "smart-attendance-system-007.firebaseapp.com", 
+            projectId: "smart-attendance-system-007", 
+            storageBucket: "smart-attendance-system-007.appspot.com", 
+            messagingSenderId: "60507340246", 
+            appId: "1:60507340246:web:d637c37b099accefe1f877",
+            measurementId: "G-LNFZFLG1W4"
+        };
+         const app = initializeApp(firebaseConfig);
+         const analytics = getAnalytics(app);
+    </script>
+    <input type="file" id="imageUpload">
+
+
+
+</body>
+
+</html>
